@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majnaou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: majnaou <majnaou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 16:02:17 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/16 07:10:47 by majnaou          ###   ########.fr       */
+/*   Updated: 2026/10/22 08:03:19 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_remove(char c, char const *set)
+static int	ft_remove(char c, char const *set)
 {
 	size_t	i;
 
@@ -32,6 +32,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	char	*ptr;
 
+	if (!s1 && !set)
+		return (NULL);
 	start = 0;
 	while (s1[start] && ft_remove(s1[start], set))
 		start++;
@@ -41,9 +43,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr = ft_substr(s1, start, (end - start) + 1);
 	return (ptr);
 }
-int main()
-{
-	char const *s1 = "......";
-	printf("%s\n", ft_strtrim(s1, "."));
-}
-	

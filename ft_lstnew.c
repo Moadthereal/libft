@@ -6,7 +6,7 @@
 /*   By: majnaou <majnaou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 17:39:39 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/19 10:48:06 by majnaou          ###   ########.fr       */
+/*   Updated: 2026/10/20 16:35:54 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ t_list	*ft_lstnew(void *content)
 	t_list	*rote;
 
 	if (!content)
-			return (NULL);
+		return (NULL);
 	rote = malloc(sizeof(t_list));
-	if(!rote)
+	if (!rote)
 		return (NULL);
 	rote->content = content;
 	rote->next = NULL;

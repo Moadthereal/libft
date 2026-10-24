@@ -6,7 +6,7 @@
 /*   By: majnaou <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 07:28:27 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/17 07:32:47 by majnaou          ###   ########.fr       */
+/*   Updated: 2026/10/20 16:38:20 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ void	ft_putstr_fd(char *s, int fd)
 	size_t	i;
 
 	i = ft_strlen(s);
-		write(fd, s, i);
+	write(fd, s, i);
 }

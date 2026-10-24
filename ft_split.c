@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majnaou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: majnaou <majnaou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/15 18:54:27 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/17 13:16:30 by majnaou          ###   ########.fr       */
+/*   Created: 2026/10/21 06:53:38 by majnaou           #+#    #+#             */
+/*   Updated: 2026/10/22 08:17:20 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,39 +51,44 @@ static char	*malloc_word(char const *s, char c)
 	return (ptr);
 }
 
-static void	free_mem(char **arr, size_t i)
+static void	free_mem(char **p, size_t i)
 {
 	while (i > 0)
-		free(arr[--i]);
+		free(p[--i]);
+}
+
+static char	**free_sp(char **p, size_t i)
+{
+	free_mem(p, i);
+	free(p);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**ptr;
+	char	**p;
 	size_t	i;
 
-	ptr = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!ptr)
+	if (!s)
+		return (NULL);
+	p = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!p)
 		return (NULL);
 	i = 0;
 	while (*s)
 	{
 		while (*s && *s == c)
 			s++;
-		if (*s && *s != c)
+		if (*s)
 		{
-			ptr[i] = malloc_word(s, c);
-			if (ptr[i] == NULL)
-			{
-				free_mem(ptr, i);
-				free(ptr);
-				return (NULL);
-			}
-			i++;
+			p[i] = malloc_word(s, c);
+			if (!p[i])
+				return (free_sp(p, i));
 			while (*s && *s != c)
 				s++;
+			i++;
 		}
 	}
-	ptr[i] = NULL;
-	return (ptr);
+	p[i] = NULL;
+	return (p);
 }
