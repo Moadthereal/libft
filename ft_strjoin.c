@@ -6,7 +6,7 @@
 /*   By: majnaou <majnaou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 09:23:21 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/22 06:32:12 by majnaou          ###   ########.fr       */
+/*   Updated: 2026/10/25 11:36:43 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*ptr;
 
 	if (!s1 || !s2)
-		return (NULL);
+		return (ft_strdup(""));
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	ptr = (char *)malloc(s1_len + s2_len + 1);

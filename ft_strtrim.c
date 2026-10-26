@@ -6,7 +6,7 @@
 /*   By: majnaou <majnaou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 16:02:17 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/22 08:03:19 by majnaou          ###   ########.fr       */
+/*   Updated: 2026/10/25 11:38:35 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*ptr;
 
 	if (!s1 && !set)
-		return (NULL);
+		return (ft_strdup(""));
 	start = 0;
 	while (s1[start] && ft_remove(s1[start], set))
 		start++;

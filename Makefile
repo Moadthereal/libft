@@ -1,7 +1,7 @@
 NAME = libft.a
 FLAGS = -Wall -Werror -Wextra
 CC = cc
-OBJS = $(SRC:.c=.o) #// Substitution Reference
+OBJS = $(SRC:.c=.o)
 SRC = ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -46,17 +46,16 @@ SRC = ft_isalpha.c \
 		ft_lstmap.c \
 		ft_lstiter.c
 
-.PHONY : all clean fclean re
+.PHONY : clean
 all : $(NAME)
 
 $(NAME) : $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 %.o:%.c libft.h
-	$(CC) $(FLAGS) -c $< -o $@
+	 $(CC) $(FLAGS) -c $< -o $@
 clean :
 	rm  -f $(OBJS)
 fclean : clean
 	rm -f $(NAME)
-re : fclean
-	$(MAKE)
+re : fclean all

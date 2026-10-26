@@ -6,7 +6,7 @@
 /*   By: majnaou <majnaou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 16:49:15 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/24 17:48:35 by majnaou          ###   ########.fr       */
+/*   Updated: 2026/10/25 09:52:55 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+# define L_MAX 9223372036854775807
+
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-
-#define L_MAX 9223372036854775807
 
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);

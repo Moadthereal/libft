@@ -6,7 +6,7 @@
 /*   By: majnaou <majnaou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 10:52:44 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/22 08:03:16 by majnaou          ###   ########.fr       */
+/*   Updated: 2026/10/25 11:37:22 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	ac_char;
 
 	if (!s)
-		return (NULL);
+		return (ft_strdup(""));
 	s_len = ft_strlen(s);
 	if (start >= s_len || s_len == 0 || len == 0)
 	{

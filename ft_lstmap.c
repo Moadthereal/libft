@@ -6,7 +6,7 @@
 /*   By: majnaou <majnaou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 07:02:51 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/24 16:56:46 by majnaou          ###   ########.fr       */
+/*   Updated: 2026/10/26 11:30:54 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*head;
 	void	*cont;
 
-	if (!lst || !f || !del)
+	if (!f || !del)
 		return (NULL);
 	head = NULL;
 	while (lst)

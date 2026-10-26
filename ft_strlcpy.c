@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majnaou <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: majnaou <majnaou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 16:58:34 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/20 17:13:58 by majnaou          ###   ########.fr       */
+/*   Updated: 2026/10/25 08:26:13 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (len);
 }
-//test with gcc -lbsd ft_strlcpy

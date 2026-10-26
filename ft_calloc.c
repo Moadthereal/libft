@@ -6,7 +6,7 @@
 /*   By: majnaou <majnaou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 15:05:50 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/22 12:05:24 by majnaou          ###   ########.fr       */
+/*   Updated: 2026/10/26 10:58:03 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ptr;
 
 	if (size == 0 || nmemb == 0)
-		return (ft_strdup(""));
+		return (malloc(1));
 	if (nmemb > ((size_t) - 1) / size)
 		return (NULL);
 	ptr = malloc(nmemb * size);

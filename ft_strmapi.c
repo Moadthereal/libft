@@ -6,7 +6,7 @@
 /*   By: majnaou <majnaou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 18:36:56 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/22 08:49:22 by majnaou          ###   ########.fr       */
+/*   Updated: 2026/10/25 11:41:06 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*p;
 
 	if (!s || !f)
-		return (NULL);
+		return (ft_strdup(""));
 	i = ft_strlen(s);
 	p = (char *)malloc(i + 1);
 	if (!p)
