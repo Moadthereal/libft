@@ -6,7 +6,7 @@
 /*   By: majnaou <majnaou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 09:02:32 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/26 11:09:13 by majnaou          ###   ########.fr       */
+/*   Updated: 2026/10/28 06:52:56 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
 
-	if (!s)
-		return (NULL);
 	i = 0;
 	while (s[i] != '\0')
 		i++;
