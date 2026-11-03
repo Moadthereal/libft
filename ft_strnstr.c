@@ -6,7 +6,7 @@
 /*   By: majnaou <majnaou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 09:46:05 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/21 19:01:25 by majnaou          ###   ########.fr       */
+/*   Updated: 2026/11/03 14:42:36 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	if (!*little)
 		return ((char *)big);
 	i = 0;
-	while (big[i] && i < len)
+	while (i < len && big[i] )
 	{
 		j = 0;
 		while (big[i + j] == little[j] && (i + j < len))
