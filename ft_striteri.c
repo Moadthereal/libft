@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majnaou <majnaou@student.42.fr>            +#+  +:+       +#+        */
+/*   By: majnaou <majnaou@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 19:10:29 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/22 08:46:23 by majnaou          ###   ########.fr       */
+/*   Updated: 2026/11/04 10:40:20 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned int	i;
+	size_t	i;
 
 	if (!s || !f)
 		return ;

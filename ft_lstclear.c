@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majnaou <majnaou@student.42.fr>            +#+  +:+       +#+        */
+/*   By: majnaou <majnaou@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 11:04:06 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/20 07:00:14 by majnaou          ###   ########.fr       */
+/*   Updated: 2026/11/04 10:36:04 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	tmp = *lst;
 	while (*lst)
 	{
-		*lst = tmp->next;
-		ft_lstdelone(tmp, del);
-		tmp = *lst;
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = tmp;
 	}
 	*lst = NULL;
 }

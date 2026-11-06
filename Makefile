@@ -46,7 +46,7 @@ SRC = ft_isalpha.c \
 		ft_lstmap.c \
 		ft_lstiter.c
 
-.PHONY : clean
+.PHONY : all clean fclean re
 all : $(NAME)
 
 $(NAME) : $(OBJS)
@@ -55,7 +55,7 @@ $(NAME) : $(OBJS)
 %.o:%.c libft.h
 	 $(CC) $(FLAGS) -c $< -o $@
 clean :
-	rm  -f $(OBJS)
+	rm -f $(OBJS)
 fclean : clean
 	rm -f $(NAME)
 re : fclean all

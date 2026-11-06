@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majnaou <majnaou@student.42.fr>            +#+  +:+       +#+        */
+/*   By: majnaou <majnaou@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 11:27:57 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/25 06:14:29 by majnaou          ###   ########.fr       */
+/*   Updated: 2026/11/04 10:44:14 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }

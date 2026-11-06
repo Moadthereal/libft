@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majnaou <majnaou@student.42.fr>            +#+  +:+       +#+        */
+/*   By: majnaou <majnaou@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 06:53:38 by majnaou           #+#    #+#             */
-/*   Updated: 2026/10/22 08:17:20 by majnaou          ###   ########.fr       */
+/*   Updated: 2026/11/04 10:39:38 by majnaou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_words(char const *s, char c)
+static size_t	count_words(char const *s, char c)
 {
-	int	i;
-	int	count;
+	size_t	i;
+	size_t	count;
 
 	i = 0;
 	count = 0;
